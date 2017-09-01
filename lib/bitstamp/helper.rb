@@ -12,7 +12,7 @@ module Bitstamp
 
     def self.parse_object!(object, klass)
       object = JSON.parse(object) if object.is_a? String
-      raise object["reason"]["__all__"].first if object["status"] == "error"
+      raise Exception.new(object["reason"]["__all__"].first) if object["status"] == "error"
 
       klass.new(object)
     end
