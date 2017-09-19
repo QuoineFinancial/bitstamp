@@ -9,8 +9,9 @@ Gem::Specification.new do |s|
   s.version = "0.4.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
+  s.require_paths = ["lib"]
   s.authors = ["Jeffrey Wilcke"]
-  s.date = "2014-03-09"
+  s.date = "2017-09-19"
   s.description = "Ruby API for use with bitstamp."
   s.email = "stygeo@gmail.com"
   s.extra_rdoc_files = [
@@ -45,7 +46,9 @@ Gem::Specification.new do |s|
     "spec/fixtures/vcr_cassettes/bitstamp/orders/sell/failure.yml",
     "spec/fixtures/vcr_cassettes/bitstamp/ticker.yml",
     "spec/fixtures/vcr_cassettes/bitstamp/transactions.yml",
+    "spec/fixtures/vcr_cassettes/bitstamp/unconfirmed_user_deposits.yml",
     "spec/fixtures/vcr_cassettes/bitstamp/user_transactions/all.yml",
+    "spec/fixtures/vcr_cassettes/bitstamp/withdraw_bitcoins/failure.yml",
     "spec/orders_spec.rb",
     "spec/spec_helper.rb",
     "spec/support/bitstamp_setup.rb",
@@ -54,8 +57,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/kojnapp/bitstamp"
   s.licenses = ["MIT"]
-  s.require_paths = ["lib"]
-  s.rubygems_version = "2.1.11"
+  s.rubygems_version = "2.4.3"
   s.summary = "Bitstamp Ruby API"
 
   if s.respond_to? :specification_version then
@@ -64,31 +66,28 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<activemodel>, [">= 3.1"])
       s.add_runtime_dependency(%q<activesupport>, [">= 3.1"])
-      s.add_runtime_dependency(%q<rest_client>, [">= 1.7.3"])
+      s.add_runtime_dependency(%q<rest-client>, ["= 2.0.2"])
       s.add_runtime_dependency(%q<ruby-hmac>, ["= 0.4.0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.3.5"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
+      s.add_development_dependency(%q<jeweler>, ["~> 2.1.0"])
     else
       s.add_dependency(%q<activemodel>, [">= 3.1"])
       s.add_dependency(%q<activesupport>, [">= 3.1"])
-      s.add_dependency(%q<rest_client>, [">= 1.7.3"])
+      s.add_dependency(%q<rest-client>, ["= 2.0.2"])
       s.add_dependency(%q<ruby-hmac>, ["= 0.4.0"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_dependency(%q<bundler>, ["~> 1.3.5"])
-      s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
+      s.add_dependency(%q<jeweler>, ["~> 2.1.0"])
     end
   else
     s.add_dependency(%q<activemodel>, [">= 3.1"])
     s.add_dependency(%q<activesupport>, [">= 3.1"])
-    s.add_dependency(%q<rest_client>, [">= 1.7.3"])
+    s.add_dependency(%q<rest-client>, ["= 2.0.2"])
     s.add_dependency(%q<ruby-hmac>, ["= 0.4.0"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
-    s.add_dependency(%q<bundler>, ["~> 1.3.5"])
-    s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
+    s.add_dependency(%q<jeweler>, ["~> 2.1.0"])
   end
 end
 

@@ -14,8 +14,7 @@ gem "ruby-hmac", "0.4.0"
 group :development do
   gem "rspec", ">= 0"
   gem "rdoc", "~> 3.12"
-  gem "bundler", "~> 1.13.1"
-  gem "jeweler", "~> 1.8.4"
+  gem "jeweler", "~> 2.1.0"
 end
 
 group :test do
